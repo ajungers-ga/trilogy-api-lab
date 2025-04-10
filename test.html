@@ -1,0 +1,33 @@
+<!--
+  test.html - mannual fetch tester
+  Purpose: This file is for testing my original POST request. 
+  It exists for testing the API using a browser fetch request without using Postman.
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Test Trilogy API</title>
+</head>
+<body>
+  <script>
+    // Sample fetch request to POST a trilogy (used for local testing)
+    fetch('http://localhost:3000/trilogies', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        title: 'The Matrix Trilogy',
+        director: 'The Wachowskis',
+        releaseYears: [1999, 2003, 2003],
+        genre: 'Sci-Fi',
+        isComplete: true
+      })
+    })
+    .then(res => res.json())
+    .then(data => console.log('Created Trilogy:', data))
+    .catch(err => console.error('Error:', err));
+  </script>
+</body>
+</html>
