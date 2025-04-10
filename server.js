@@ -88,3 +88,13 @@ app.put('/trilogies/:id', async (req, res) => {
 app.listen(3000, () => {
     console.log('The express app is ready!');
 });
+
+
+
+// to test and debug im running npx nodemon server.js &
+// and in ANOTHER TERMINAL im running ➜  
+// trilogy-api git:(main) cd ~/code/ga/labs/trilogy-api/client
+// npm run dev
+//
+// then im visiting http://localhost:5173/ to view the app
+
